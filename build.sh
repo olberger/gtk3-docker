@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 
-docker kill gtk3-docker
-docker rm gtk3-docker
+docker kill wireshark-broadway
+docker rm wireshark-broadway
 
-docker build -t gtk3-docker .
+docker build -t wireshark-broadway .
 
-docker run -d --rm -it -p 8085:8085 --name gtk3-docker gtk3-docker
+echo <<EOF
+to run, do : 
 
-open http://localhost:8085
+docker run -d --rm -it -p 8085:8085 --name wireshark-broadway wireshark-broadway
+
+Then open http://localhost:8085 in the browser
+EOF
+
 
