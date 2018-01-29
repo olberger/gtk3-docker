@@ -13,8 +13,8 @@ This container image is inspired by [[https://github.com/moondev/gtk3-docker][gt
 * Description
 
 This container is based on Debian GNU/Linux (=latest= aka /stretch/). It sets up the
-environment to use the BROADWAY HTML5 display for rendering
-applications Gtk applications.
+environment to use the /BROADWAY/ HTML5 display for Gdk. It allows rendering
+Gtk applications in a Web page.
 
 Wireshark will be opened on a network traffic capture file embedded
 inside the container image.
@@ -28,7 +28,7 @@ docker build -t wireshark-broadway .
 
 (or refer to [[file:build.sh]]).
 
-The open =http://localhost:8085= in your browser.
+Then open =http://localhost:8085= in your browser.
 
 You may also pull the image already built, but fear the MITM :
 https://hub.docker.com/r/olberger/wireshark-broadway/
