@@ -21,4 +21,7 @@ nohup broadwayd :5 &
 # gjs egHeader.js
 # # cd /gjs
 # # gjs window.js
+
+# Fullscreen not yet available in stable
+#wireshark-gtk --fullscreen /traces-exemple-1.pcapng
 wireshark-gtk /traces-exemple-1.pcapng
