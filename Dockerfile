@@ -1,4 +1,12 @@
-FROM debian:latest
+# Instead of hardcoding a Debian version, we reserve the possibility to provide a version at build time
+# using --build-arg debian_version=x.y.z
+#FROM debian:stretch
+#FROM debian:latest
+
+# Unless specified explicitely, use latest stable minor update (slim variant)
+ARG debian_version=stable-slim
+
+FROM debian:$debian_version
 
 #COPY gjs /gjs
 
@@ -28,3 +36,5 @@ COPY traces-exemple-1.pcapng /traces-exemple-1.pcapng
 
 COPY init.sh /init.sh
 CMD ["/init.sh"]
+
+RUN cat /etc/debian_version
