@@ -1,4 +1,3 @@
-#FROM pritunl/archlinux:latest
 FROM debian:latest
 
 #COPY gjs /gjs
