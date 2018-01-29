@@ -33,3 +33,13 @@ Then open =http://localhost:8085= in your browser.
 You may also pull the image already built, but fear the MITM :
 https://hub.docker.com/r/olberger/wireshark-broadway/
 
+* Publishing the image
+
+If you're me (olberger), you may :
+#+BEGIN_SRC 
+DOCKER_ID_USER="olberger" docker login
+docker tag wireshark-broadway:debian-9.3 olberger/wireshark-broadway:debian-9.3
+docker push olberger/wireshark-broadway:debian-9.3
+docker tag wireshark-broadway:debian-9.3 olberger/wireshark-broadway:latest
+docker push olberger/wireshark-broadway:latest
+#+END_SRC
